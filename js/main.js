@@ -112,8 +112,6 @@ let productos = [
     },
 ];
 
-// let productos = [];
-
 fetch("productos.json")
     .then(response => response.json())
     .then(data => {
@@ -121,6 +119,34 @@ fetch("productos.json")
         cargarProductos(productos);
     })
 
+
+
+//     let productos = [];
+
+// fetch("./js/productos.json")
+// 	.then((response) => response.json())
+// 	.then((data) => {
+// 		productos = data;
+// 		cargarProductos(productos);
+// 		botonesCategorias.forEach((boton) => {
+// 			boton.addEventListener("click", (e) => {
+// 				botonesCategorias.forEach((boton) => boton.classList.remove("active"));
+// 				e.currentTarget.classList.add("active");
+
+// 				if (e.currentTarget.id != "todos") {
+// 					const productoCategoria = productos.find((producto) => producto.categoria.id === e.currentTarget.id);
+// 					tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+// 					const productosBoton = productos.filter((producto) => producto.categoria.id === e.currentTarget.id);
+// 					cargarProductos(productosBoton);
+// 				} else {
+// 					tituloPrincipal.innerText = "Todos los productos";
+// 					cargarProductos(productos);
+// 				}
+// 			});
+// 		});
+// 	});
+
+    
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
